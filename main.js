@@ -58,6 +58,7 @@ $(document).ready(function(){
       averageSpeed += currSpeed
     })
     averageSpeed /= mphs.length
+    $('body').append(`<h1> ${averageSpeed}</h1>`)
     console.log(averageSpeed);
   })
 
