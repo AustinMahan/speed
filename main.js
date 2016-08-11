@@ -42,10 +42,10 @@ $(document).ready(function(){
         var longDiffMi = Math.abs((long - prevLong) * 57.912)
 
         var distance = Math.sqrt(Math.pow(latDiffMi, 2) + Math.pow(longDiffMi, 2))
-        arrOfSpeeds.push(parseFloat(distance.toFixed(3)) * 720)
+        arrOfSpeeds.push(parseFloat(distance.toFixed(3)) / 5  * 3600)
         if (i == arrPositions.length - 1) {
           console.log(arrOfSpeeds);
-          mphs.push(arrOfSpeeds.pop())
+          mphs = arrOfSpeeds
         }
       }
     }
